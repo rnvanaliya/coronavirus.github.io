@@ -1,0 +1,13 @@
+<script>
+	
+	async function getCovidapi() {
+		// body...
+		const jsondata = await fetch('https://api.covid19api.com/summary');
+		const jsdata = await jsondata.json();
+		const country_name = jsdata.Countries[76];
+
+		console.log(' THE NAME OF Country ID ${country_name} ');
+		// console.log('the name ${country_name.Country}.sdfs');
+	}
+getCovidapi();
+</script>
